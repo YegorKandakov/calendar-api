@@ -5,7 +5,7 @@ const schema = new mongoose.Schema(
     start: {type: Number, required: true},
     duration: {type: Number, required: true},
     title: {type: String, required: true},
-    // userId: { type: mongoose.Schema.Types.ObjectId, required: true }
+    userId: { type: mongoose.Schema.Types.ObjectId, required: true }
   }
 );
 
