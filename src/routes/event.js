@@ -17,4 +17,10 @@ router.post("/add", (req, res) => {
     .catch(err => res.status(400).json({errors: parseErrors(err.errors)}));
 });
 
+router.delete("/delete/:id", (req, res) => {
+  Event.remove({_id: req.params.id})
+  .then(() => res.json(req.params.id))
+  .catch(err => res.status(400).json({errors: parseErrors(err.errors)}));
+});
+
 export default router;
